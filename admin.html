@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="Styles/admin.css">
+</head>
+<body>
+    <h1>Token Generator</h1>
+    <form id="tokenForm">
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url" name="url" required>
+        <button type="button" onclick="generateToken()">Generate Token</button>
+    </form>
+    <p id="tokenDisplay">Generated Token: <span id="token"></span></p>
+    <p id="tokenURL">Associated URL: <span id="urlDisplay"></span></p>
+
+    <h2>Manage Tokens</h2>
+    <label for="tokenSelect">Select Token to Remove:</label>
+    <select id="tokenSelect">
+        <!-- Options will be populated here -->
+    </select>
+    <button type="button" onclick="removeToken()">Remove Selected Token</button>
+
+    <h2>Generated Tokens</h2>
+    <table id="tokensTable">
+        <thead>
+            <tr>
+                <th>Token</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Token rows will be appended here -->
+        </tbody>
+    </table>
+
+    <script src="Scripts/admin.js"></script>
+</body>
+</html>
